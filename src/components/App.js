@@ -16,11 +16,11 @@ function App() {
       <BrowserRouter>
         <Header />
         <Routes>
-          <Route path="/" element={<Home />} />
-          <Route path="/products" element={<Products />} />
-          <Route path="/company" element={<Company />} />
-          <Route path="/pricing" element={<Pricing />} />
-          <Route path="/blog" element={<Blog />} />
+          <Route exact path="/" element={<Home />} />
+          <Route exact path="/products" element={<Products />} />
+          <Route exact path="/company" element={<Company />} />
+          <Route exact path="/pricing" element={<Pricing />} />
+          <Route exact path="/blog" element={<Blog />} />
         </Routes>
       </BrowserRouter>
     </ThemeProvider>
