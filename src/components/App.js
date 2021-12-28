@@ -3,6 +3,7 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 
 import theme from "./ui/theme";
 import Header from "./ui/Header";
+import Footer from "./ui/Footer";
 
 const Home = () => <div>home</div>;
 const Products = () => <div>products</div>;
@@ -22,6 +23,7 @@ function App() {
           <Route exact path="/pricing" element={<Pricing />} />
           <Route exact path="/blog" element={<Blog />} />
         </Routes>
+        <Footer />
       </BrowserRouter>
     </ThemeProvider>
   );
