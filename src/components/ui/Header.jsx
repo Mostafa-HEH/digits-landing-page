@@ -112,9 +112,8 @@ const Header = (props) => {
     /iPad|iPhone|iPod/.test(navigator.userAgent);
 
   const [openDrawer, setopenDrawer] = useState(false);
-  const [tabValue, setTabValue] = useState(0);
   const [anchorEl, setAnchorEl] = useState(null);
-  const [selectedMenuItem, setSelectedMenuItem] = useState(null);
+
   const [openNestedList, setOpenListedList] = useState(false);
 
   const menuItemOptions = [
@@ -130,62 +129,62 @@ const Header = (props) => {
   };
   const MenuItemHandleClose = (e) => {
     setAnchorEl(null);
-    setTabValue(2);
+    props.setTabValue(2);
   };
 
   const MenuItemHandleClick = (e, i) => {
     setAnchorEl(null);
-    setTabValue(2);
-    setSelectedMenuItem(i);
+    props.setTabValue(2);
+    props.setSelectedMenuItem(i);
   };
 
   useEffect(() => {
     switch (window.location.pathname) {
       case "/":
-        if (tabValue !== 0) setTabValue(0);
+        if (props.tabValue !== 0) props.setTabValue(0);
         break;
       case "/products":
-        if (tabValue !== 1) setTabValue(1);
+        if (props.tabValue !== 1) props.setTabValue(1);
         break;
       case "/company":
-        if (tabValue !== 2) setTabValue(2);
+        if (props.tabValue !== 2) props.setTabValue(2);
         break;
       case "/company/history":
-        if (tabValue !== 2) {
-          setTabValue(2);
-          setSelectedMenuItem(1);
+        if (props.tabValue !== 2) {
+          props.setTabValue(2);
+          props.setSelectedMenuItem(1);
         }
         break;
       case "/company/works":
-        if (tabValue !== 2) {
-          setTabValue(2);
-          setSelectedMenuItem(2);
+        if (props.tabValue !== 2) {
+          props.setTabValue(2);
+          props.setSelectedMenuItem(2);
         }
         break;
       case "/company/testmonials":
-        if (tabValue !== 2) {
-          setTabValue(2);
-          setSelectedMenuItem(3);
+        if (props.tabValue !== 2) {
+          props.setTabValue(2);
+          props.setSelectedMenuItem(3);
         }
         break;
       case "/pricing":
-        if (tabValue !== 3) setTabValue(3);
+        if (props.tabValue !== 3) props.setTabValue(3);
         break;
       case "/blog":
-        if (tabValue !== 4) setTabValue(4);
+        if (props.tabValue !== 4) props.setTabValue(4);
         break;
 
       default:
-        setTabValue(0);
+        props.setTabValue(0);
         break;
     }
-  }, [tabValue]);
+  }, [props]);
 
   const tabs = (
     <Fragment>
       <TabsCustom
-        value={tabValue}
-        onChange={(e, value) => setTabValue(value)}
+        value={props.tabValue}
+        onChange={(e, value) => props.setTabValue(value)}
         indicatorColor="secondary"
       >
         <TabCustom disableRipple label="Home" component={Link} to="/" />
@@ -231,7 +230,7 @@ const Header = (props) => {
               onClick={(e) => MenuItemHandleClick(e, i)}
               component={Link}
               to={link}
-              selected={i === selectedMenuItem && tabValue === 2}
+              selected={i === props.selectedMenuItem && props.tabValue === 2}
             >
               {name}
             </MenuItemCustom>
@@ -259,17 +258,17 @@ const Header = (props) => {
         onOpen={() => setopenDrawer(true)}
       >
         <div className={classes.pushDown} />
-        <List value={tabValue}>
+        <List value={props.tabValue}>
           <ListItemCustom
             divider
             button
             component={Link}
             to="/"
             onClick={() => {
-              setTabValue(0);
+              props.setTabValue(0);
               setopenDrawer(false);
             }}
-            selected={tabValue === 0}
+            selected={props.tabValue === 0}
           >
             <ListItemText>Home</ListItemText>
           </ListItemCustom>
@@ -279,10 +278,10 @@ const Header = (props) => {
             component={Link}
             to="/products"
             onClick={() => {
-              setTabValue(1);
+              props.setTabValue(1);
               setopenDrawer(false);
             }}
-            selected={tabValue === 1}
+            selected={props.tabValue === 1}
           >
             <ListItemText>Products</ListItemText>
           </ListItemCustom>
@@ -290,10 +289,10 @@ const Header = (props) => {
             divider
             button
             onClick={() => {
-              setTabValue(2);
+              props.setTabValue(2);
               setOpenListedList(!openNestedList);
             }}
-            selected={tabValue === 2}
+            selected={props.tabValue === 2}
           >
             <ListItemText>Company</ListItemText>
             {openNestedList ? <ExpandLess /> : <ExpandMore />}
@@ -306,11 +305,11 @@ const Header = (props) => {
                 component={Link}
                 to="/company"
                 onClick={() => {
-                  setSelectedMenuItem(0);
-                  setTabValue(2);
+                  props.setSelectedMenuItem(0);
+                  props.setTabValue(2);
                   setopenDrawer(false);
                 }}
-                selected={selectedMenuItem === 0}
+                selected={props.selectedMenuItem === 0}
               >
                 <ListItemIcon>
                   <ReadMoreIcon fontSize="small" color="primary" />
@@ -323,11 +322,11 @@ const Header = (props) => {
                 component={Link}
                 to="/company/history"
                 onClick={() => {
-                  setSelectedMenuItem(1);
-                  setTabValue(2);
+                  props.setSelectedMenuItem(1);
+                  props.setTabValue(2);
                   setopenDrawer(false);
                 }}
-                selected={selectedMenuItem === 1}
+                selected={props.selectedMenuItem === 1}
               >
                 <ListItemIcon>
                   <ReadMoreIcon fontSize="small" color="primary" />
@@ -340,11 +339,11 @@ const Header = (props) => {
                 component={Link}
                 to="/company/works"
                 onClick={() => {
-                  setSelectedMenuItem(2);
-                  setTabValue(2);
+                  props.setSelectedMenuItem(2);
+                  props.setTabValue(2);
                   setopenDrawer(false);
                 }}
-                selected={selectedMenuItem === 2}
+                selected={props.selectedMenuItem === 2}
               >
                 <ListItemIcon>
                   <ReadMoreIcon fontSize="small" color="primary" />
@@ -357,11 +356,11 @@ const Header = (props) => {
                 component={Link}
                 to="/company/testmonials"
                 onClick={() => {
-                  setSelectedMenuItem(3);
-                  setTabValue(2);
+                  props.setSelectedMenuItem(3);
+                  props.setTabValue(2);
                   setopenDrawer(false);
                 }}
-                selected={selectedMenuItem === 3}
+                selected={props.selectedMenuItem === 3}
               >
                 <ListItemIcon>
                   <ReadMoreIcon fontSize="small" color="primary" />
@@ -376,10 +375,10 @@ const Header = (props) => {
             component={Link}
             to="/pricing"
             onClick={() => {
-              setTabValue(3);
+              props.setTabValue(3);
               setopenDrawer(false);
             }}
-            selected={tabValue === 3}
+            selected={props.tabValue === 3}
           >
             <ListItemText>Pricing</ListItemText>
           </ListItemCustom>
@@ -389,10 +388,10 @@ const Header = (props) => {
             component={Link}
             to="/blog"
             onClick={() => {
-              setTabValue(4);
+              props.setTabValue(4);
               setopenDrawer(false);
             }}
-            selected={tabValue === 4}
+            selected={props.tabValue === 4}
           >
             <ListItemText>Blog</ListItemText>
           </ListItemCustom>
@@ -420,7 +419,7 @@ const Header = (props) => {
       <ElevationScroll {...props}>
         <AppBarCustom position="fixed" color="secondary">
           <Toolbar>
-            <Link to="/" onClick={() => setTabValue(0)}>
+            <Link to="/" onClick={() => props.setTabValue(0)}>
               <img src={logo} alt="digits logo" />
             </Link>
             {matches ? swiberDrawer : tabs}

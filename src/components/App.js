@@ -1,3 +1,4 @@
+import React, { useState } from "react";
 import { ThemeProvider } from "@mui/material/styles";
 import { BrowserRouter, Routes, Route } from "react-router-dom";
 
@@ -12,10 +13,17 @@ const Pricing = () => <div>pricing</div>;
 const Blog = () => <div>Blog</div>;
 
 function App() {
+  const [tabValue, setTabValue] = useState(0);
+  const [selectedMenuItem, setSelectedMenuItem] = useState(null);
   return (
     <ThemeProvider theme={theme}>
       <BrowserRouter>
-        <Header />
+        <Header
+          tabValue={tabValue}
+          setTabValue={setTabValue}
+          selectedMenuItem={selectedMenuItem}
+          setSelectedMenuItem={setSelectedMenuItem}
+        />
         <Routes>
           <Route exact path="/" element={<Home />} />
           <Route exact path="/products" element={<Products />} />
@@ -23,7 +31,12 @@ function App() {
           <Route exact path="/pricing" element={<Pricing />} />
           <Route exact path="/blog" element={<Blog />} />
         </Routes>
-        <Footer />
+        <Footer
+          tabValue={tabValue}
+          setTabValue={setTabValue}
+          selectedMenuItem={selectedMenuItem}
+          setSelectedMenuItem={setSelectedMenuItem}
+        />
       </BrowserRouter>
     </ThemeProvider>
   );

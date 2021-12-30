@@ -4,6 +4,8 @@ export default createTheme({
   palette: {
     common: {
       textColor: "#1E266D",
+      lightBlue: "#455880",
+      lightBlue50: "rgba(69,88,128,0.5)",
     },
     primary: {
       main: "#3751FF",
@@ -20,6 +22,5 @@ export default createTheme({
       color: "#1E266D",
       textTransform: "none",
     },
-    h3: {},
   },
 });
