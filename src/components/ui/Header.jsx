@@ -4,7 +4,6 @@ import {
   Toolbar,
   Tabs,
   Tab,
-  Button,
   Typography,
   Menu,
   MenuItem,
@@ -29,6 +28,7 @@ import { Link } from "react-router-dom";
 import { makeStyles } from "@mui/styles";
 
 import logo from "../../assets/images/logo.svg";
+import CustomButton from "./Button";
 
 function ElevationScroll(props) {
   const { children } = props;
@@ -66,12 +66,6 @@ const PhoneTabCustom = styled(Typography)(({ theme }) => ({
   [theme.breakpoints.down("lg")]: {
     marginRight: 16,
   },
-}));
-
-const ButtonCustom = styled(Button)(({ theme }) => ({
-  borderRadius: "50px",
-  textTransform: "none",
-  fontSize: "0.9rem",
 }));
 
 const MenuItemCustom = styled(MenuItem)(({ theme }) => ({
@@ -240,7 +234,7 @@ const Header = (props) => {
       <PhoneTabCustom component="a" href="tel:+00 0123 456789">
         +00 0123 456789
       </PhoneTabCustom>
-      <ButtonCustom variant="contained">Contact Us</ButtonCustom>
+      <CustomButton variant="contained">Contact Us</CustomButton>
     </Fragment>
   );
 

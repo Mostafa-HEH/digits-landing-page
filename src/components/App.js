@@ -4,9 +4,9 @@ import { BrowserRouter, Routes, Route } from "react-router-dom";
 
 import theme from "./ui/theme";
 import Header from "./ui/Header";
+import Landing from "./ui/Landing";
 import Footer from "./ui/Footer";
 
-const Home = () => <div>home</div>;
 const Products = () => <div>products</div>;
 const Company = () => <div>Company</div>;
 const Pricing = () => <div>pricing</div>;
@@ -25,7 +25,7 @@ function App() {
           setSelectedMenuItem={setSelectedMenuItem}
         />
         <Routes>
-          <Route exact path="/" element={<Home />} />
+          <Route exact path="/" element={<Landing />} />
           <Route exact path="/products" element={<Products />} />
           <Route exact path="/company" element={<Company />} />
           <Route exact path="/pricing" element={<Pricing />} />
