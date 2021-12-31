@@ -2,13 +2,14 @@ import { createTheme } from "@mui/material/styles";
 
 const darkBlue = "#1E266D";
 const lightBlue = "#455880";
+const lightBlue50 = "rgba(69,88,128,0.5)";
 
 export default createTheme({
   palette: {
     common: {
       textColor: darkBlue,
       lightBlue: lightBlue,
-      lightBlue50: "rgba(69,88,128,0.5)",
+      lightBlue50: lightBlue50,
     },
     primary: {
       main: "#3751FF",
@@ -34,6 +35,11 @@ export default createTheme({
     h3: {
       color: lightBlue,
       fontSize: ".9em",
+      fontWeight: "600",
+    },
+    h4: {
+      color: lightBlue50,
+      fontSize: "1em",
       fontWeight: "600",
     },
   },
