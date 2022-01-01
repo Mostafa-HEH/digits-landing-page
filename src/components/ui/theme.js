@@ -55,6 +55,7 @@ export default createTheme({
     },
     body1: {
       color: lightBlue,
+      fontWeight: "600",
     },
   },
 });

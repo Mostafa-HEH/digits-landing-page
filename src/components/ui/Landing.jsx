@@ -4,10 +4,11 @@ import { makeStyles } from "@mui/styles";
 import HeroSection from "./HeroSection.landing";
 import LogosSection from "./LogosSection.landing";
 import AboutSection from "./AboutSection.landing";
+import PortfolioSection from "./PortfolioSection.landing";
 
 const useStyles = makeStyles((theme) => ({
   sectionsMargin: {
-    height: "5em"
+    height: "5em",
   },
   placeHolder: {
     backgroundColor: "#f4f43f",
@@ -27,6 +28,9 @@ const Landing = () => {
       <LogosSection />
       <div className={sectionsMargin} />
       <AboutSection />
+      <div className={sectionsMargin} />
+      <PortfolioSection />
+      <div className={sectionsMargin} />
       <div className={placeHolder} />
     </div>
   );

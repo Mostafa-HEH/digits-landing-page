@@ -52,7 +52,7 @@ const AboutSection = () => {
     useStyles();
 
   return (
-    <Grid container justifyContent="center" spacing={4}>
+    <Grid container justifyContent="center" spacing={4} paddingTop="5rem">
       <Grid item>
         <h2 className={heading}>Whatever work you do, we're able to help</h2>
       </Grid>
