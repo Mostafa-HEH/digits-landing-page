@@ -12,12 +12,17 @@ const ButtonCustom = styled(Button)(({ theme, secondary }) => ({
   boxShadow: theme.shadows[2],
   "&:hover": {
     borderColor: secondary && "transparent",
+    backgroundColor: secondary && "#fff",
   },
 }));
 
-const CustomButton = ({ children, variant, secondary }) => {
+const CustomButton = ({ children, variant, secondary, startIcon }) => {
   return (
-    <ButtonCustom variant={variant ? variant : null} secondary={secondary}>
+    <ButtonCustom
+      variant={variant ? variant : null}
+      startIcon={startIcon ? startIcon : null}
+      secondary={secondary}
+    >
       {children}
     </ButtonCustom>
   );

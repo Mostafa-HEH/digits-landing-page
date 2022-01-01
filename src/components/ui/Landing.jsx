@@ -6,20 +6,16 @@ import LogosSection from "./LogosSection.landing";
 import AboutSection from "./AboutSection.landing";
 import PortfolioSection from "./PortfolioSection.landing";
 import TestimonialsSection from "./TestimonialsSection.landing";
+import CTA from "./CTASection.landing";
 
 const useStyles = makeStyles((theme) => ({
   sectionsMargin: {
     height: "5em",
   },
-  placeHolder: {
-    backgroundColor: "#f4f43f",
-    width: "100%",
-    height: "16px",
-  },
 }));
 
 const Landing = () => {
-  const { placeHolder, sectionsMargin } = useStyles();
+  const { sectionsMargin } = useStyles();
 
   return (
     <div>
@@ -33,7 +29,8 @@ const Landing = () => {
       <PortfolioSection />
       <div className={sectionsMargin} />
       <TestimonialsSection />
-      <div className={placeHolder} />
+      <div className={sectionsMargin} />
+      <CTA />
     </div>
   );
 };
