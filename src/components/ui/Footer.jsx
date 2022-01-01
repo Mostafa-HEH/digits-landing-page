@@ -67,7 +67,7 @@ const Footer = (props) => {
               item
               className={classes.linkHead}
               component={Link}
-              to="/"
+              to="/digits-landing-page/"
               onClick={() => props.setTabValue(0)}
             >
               <img src={logo} alt="digits company logo" />
@@ -94,7 +94,7 @@ const Footer = (props) => {
                 item
                 className={classes.link}
                 component={Link}
-                to="/"
+                to="/digits-landing-page/"
                 onClick={() => props.setTabValue(0)}
               >
                 Home
@@ -103,7 +103,7 @@ const Footer = (props) => {
                 item
                 className={classes.link}
                 component={Link}
-                to="/company"
+                to="/digits-landing-page/company"
                 onClick={() => props.setTabValue(2)}
               >
                 About
@@ -112,7 +112,7 @@ const Footer = (props) => {
                 item
                 className={classes.link}
                 component={Link}
-                to="/company"
+                to="/digits-landing-page/company"
                 onClick={() => props.setTabValue(2)}
               >
                 News
@@ -121,7 +121,7 @@ const Footer = (props) => {
                 item
                 className={classes.link}
                 component={Link}
-                to="/products"
+                to="/digits-landing-page/products"
                 onClick={() => props.setTabValue(1)}
               >
                 Pricing
@@ -130,7 +130,7 @@ const Footer = (props) => {
                 item
                 className={classes.link}
                 component={Link}
-                to="/"
+                to="/digits-landing-page/"
                 onClick={() => props.setTabValue(0)}
               >
                 Contact
@@ -153,7 +153,7 @@ const Footer = (props) => {
                 item
                 className={classes.link}
                 component={Link}
-                to="/products"
+                to="/digits-landing-page/products"
                 onClick={() => props.setTabValue(1)}
               >
                 Classic
@@ -162,7 +162,7 @@ const Footer = (props) => {
                 item
                 className={classes.link}
                 component={Link}
-                to="/products"
+                to="/digits-landing-page/products"
                 onClick={() => props.setTabValue(1)}
               >
                 Boxy
@@ -171,7 +171,7 @@ const Footer = (props) => {
                 item
                 className={classes.link}
                 component={Link}
-                to="/products"
+                to="/digits-landing-page/products"
                 onClick={() => props.setTabValue(1)}
               >
                 Gradient
@@ -180,7 +180,7 @@ const Footer = (props) => {
                 item
                 className={classes.link}
                 component={Link}
-                to="/products"
+                to="/digits-landing-page/products"
                 onClick={() => props.setTabValue(1)}
               >
                 Minimal
@@ -189,7 +189,7 @@ const Footer = (props) => {
                 item
                 className={classes.link}
                 component={Link}
-                to="/products"
+                to="/digits-landing-page/products"
                 onClick={() => props.setTabValue(1)}
               >
                 Nigth
@@ -259,7 +259,7 @@ const Footer = (props) => {
                 item
                 className={classes.link}
                 component={Link}
-                to="/comapny"
+                to="/digits-landing-page/comapny"
                 onClick={() => props.setTabValue(2)}
               >
                 Download now
@@ -268,7 +268,7 @@ const Footer = (props) => {
                 item
                 className={classes.link}
                 component={Link}
-                to="/company"
+                to="/digits-landing-page/company"
                 onClick={() => props.setTabValue(2)}
               >
                 Documentation
@@ -309,7 +309,7 @@ const Footer = (props) => {
               item
               className={classes.link}
               component={Link}
-              to="/company"
+              to="/digits-landing-page/company"
               onClick={() => props.setTabValue(2)}
             >
               Privacy Policy
@@ -318,7 +318,7 @@ const Footer = (props) => {
               item
               className={classes.link}
               component={Link}
-              to="/company"
+              to="/digits-landing-page/company"
               onClick={() => props.setTabValue(2)}
             >
               Terms Of Use
@@ -327,7 +327,7 @@ const Footer = (props) => {
               item
               className={classes.link}
               component={Link}
-              to="/company"
+              to="/digits-landing-page/company"
               onClick={() => props.setTabValue(2)}
             >
               GDBR

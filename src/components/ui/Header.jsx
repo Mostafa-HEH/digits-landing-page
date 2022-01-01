@@ -111,10 +111,10 @@ const Header = (props) => {
   const [openNestedList, setOpenListedList] = useState(false);
 
   const menuItemOptions = [
-    { name: "Company", link: "/company" },
-    { name: "History", link: "/company/history" },
-    { name: "Works", link: "/company/works" },
-    { name: "Testmonials", link: "/company/testmonials" },
+    { name: "Company", link: "/digits-landing-page/company" },
+    { name: "History", link: "/digits-landing-page/company/history" },
+    { name: "Works", link: "/digits-landing-page/company/works" },
+    { name: "Testmonials", link: "/digits-landing-page/company/testmonials" },
   ];
 
   const open = Boolean(anchorEl);
@@ -134,37 +134,37 @@ const Header = (props) => {
 
   useEffect(() => {
     switch (window.location.pathname) {
-      case "/":
+      case "/digits-landing-page/":
         if (props.tabValue !== 0) props.setTabValue(0);
         break;
-      case "/products":
+      case "/digits-landing-page/products":
         if (props.tabValue !== 1) props.setTabValue(1);
         break;
-      case "/company":
+      case "/digits-landing-page/company":
         if (props.tabValue !== 2) props.setTabValue(2);
         break;
-      case "/company/history":
+      case "/digits-landing-page/company/history":
         if (props.tabValue !== 2) {
           props.setTabValue(2);
           props.setSelectedMenuItem(1);
         }
         break;
-      case "/company/works":
+      case "/digits-landing-page/company/works":
         if (props.tabValue !== 2) {
           props.setTabValue(2);
           props.setSelectedMenuItem(2);
         }
         break;
-      case "/company/testmonials":
+      case "/digits-landing-page/company/testmonials":
         if (props.tabValue !== 2) {
           props.setTabValue(2);
           props.setSelectedMenuItem(3);
         }
         break;
-      case "/pricing":
+      case "/digits-landing-page/pricing":
         if (props.tabValue !== 3) props.setTabValue(3);
         break;
-      case "/blog":
+      case "/digits-landing-page/blog":
         if (props.tabValue !== 4) props.setTabValue(4);
         break;
 
@@ -181,12 +181,17 @@ const Header = (props) => {
         onChange={(e, value) => props.setTabValue(value)}
         indicatorColor="secondary"
       >
-        <TabCustom disableRipple label="Home" component={Link} to="/" />
+        <TabCustom
+          disableRipple
+          label="Home"
+          component={Link}
+          to="/digits-landing-page/"
+        />
         <TabCustom
           disableRipple
           label="Products"
           component={Link}
-          to="/products"
+          to="/digits-landing-page/products"
         />
         <TabCustom
           disableRipple
@@ -196,7 +201,7 @@ const Header = (props) => {
           onMouseOver={MenuItemsHandleHover}
           label="Company"
           component={Link}
-          to="/company"
+          to="/digits-landing-page/company"
           icon={<KeyboardArrowDownIcon />}
           iconPosition="end"
         />
@@ -204,9 +209,14 @@ const Header = (props) => {
           disableRipple
           label="Pricing"
           component={Link}
-          to="/pricing"
+          to="/digits-landing-page/pricing"
         />
-        <TabCustom disableRipple label="Blog" component={Link} to="/blog" />
+        <TabCustom
+          disableRipple
+          label="Blog"
+          component={Link}
+          to="/digits-landing-page/blog"
+        />
         <Menu
           id="basic-menu"
           anchorEl={anchorEl}
@@ -257,7 +267,7 @@ const Header = (props) => {
             divider
             button
             component={Link}
-            to="/"
+            to="/digits-landing-page/"
             onClick={() => {
               props.setTabValue(0);
               setopenDrawer(false);
@@ -270,7 +280,7 @@ const Header = (props) => {
             divider
             button
             component={Link}
-            to="/products"
+            to="/digits-landing-page/products"
             onClick={() => {
               props.setTabValue(1);
               setopenDrawer(false);
@@ -297,7 +307,7 @@ const Header = (props) => {
                 divider
                 button
                 component={Link}
-                to="/company"
+                to="/digits-landing-page/company"
                 onClick={() => {
                   props.setSelectedMenuItem(0);
                   props.setTabValue(2);
@@ -314,7 +324,7 @@ const Header = (props) => {
                 divider
                 button
                 component={Link}
-                to="/company/history"
+                to="/digits-landing-page/company/history"
                 onClick={() => {
                   props.setSelectedMenuItem(1);
                   props.setTabValue(2);
@@ -331,7 +341,7 @@ const Header = (props) => {
                 divider
                 button
                 component={Link}
-                to="/company/works"
+                to="/digits-landing-page/company/works"
                 onClick={() => {
                   props.setSelectedMenuItem(2);
                   props.setTabValue(2);
@@ -348,7 +358,7 @@ const Header = (props) => {
                 divider
                 button
                 component={Link}
-                to="/company/testmonials"
+                to="/digits-landing-page/company/testmonials"
                 onClick={() => {
                   props.setSelectedMenuItem(3);
                   props.setTabValue(2);
@@ -367,7 +377,7 @@ const Header = (props) => {
             divider
             button
             component={Link}
-            to="/pricing"
+            to="/digits-landing-page/pricing"
             onClick={() => {
               props.setTabValue(3);
               setopenDrawer(false);
@@ -380,7 +390,7 @@ const Header = (props) => {
             divider
             button
             component={Link}
-            to="/blog"
+            to="/digits-landing-page/blog"
             onClick={() => {
               props.setTabValue(4);
               setopenDrawer(false);
@@ -413,7 +423,10 @@ const Header = (props) => {
       <ElevationScroll {...props}>
         <AppBarCustom position="fixed" color="secondary">
           <Toolbar>
-            <Link to="/" onClick={() => props.setTabValue(0)}>
+            <Link
+              to="/digits-landing-page/"
+              onClick={() => props.setTabValue(0)}
+            >
               <img src={logo} alt="digits logo" />
             </Link>
             {matches ? swiberDrawer : tabs}
