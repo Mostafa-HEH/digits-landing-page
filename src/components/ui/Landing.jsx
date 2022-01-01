@@ -5,6 +5,7 @@ import HeroSection from "./HeroSection.landing";
 import LogosSection from "./LogosSection.landing";
 import AboutSection from "./AboutSection.landing";
 import PortfolioSection from "./PortfolioSection.landing";
+import TestimonialsSection from "./TestimonialsSection.landing";
 
 const useStyles = makeStyles((theme) => ({
   sectionsMargin: {
@@ -31,6 +32,7 @@ const Landing = () => {
       <div className={sectionsMargin} />
       <PortfolioSection />
       <div className={sectionsMargin} />
+      <TestimonialsSection />
       <div className={placeHolder} />
     </div>
   );
