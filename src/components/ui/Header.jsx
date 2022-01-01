@@ -92,7 +92,7 @@ const ListItemCustom = styled(ListItem)(({ theme }) => ({
 const ListItemBtnCustom = styled(ListItem)(({ theme }) => ({
   ...theme.typography.tab,
   backgroundColor: theme.palette.primary.main,
-  color: theme.palette.secondary.main,
+  color: "#fff",
   textAlign: "center",
   marginTop: "auto",
 }));
