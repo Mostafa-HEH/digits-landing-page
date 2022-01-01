@@ -25,11 +25,23 @@ function App() {
           setSelectedMenuItem={setSelectedMenuItem}
         />
         <Routes>
-          <Route exact path="/" element={<Landing />} />
-          <Route exact path="/products" element={<Products />} />
-          <Route exact path="/company" element={<Company />} />
-          <Route exact path="/pricing" element={<Pricing />} />
-          <Route exact path="/blog" element={<Blog />} />
+          <Route exact path="/digits-landing-page/" element={<Landing />} />
+          <Route
+            exact
+            path="/digits-landing-page/products"
+            element={<Products />}
+          />
+          <Route
+            exact
+            path="/digits-landing-page/company"
+            element={<Company />}
+          />
+          <Route
+            exact
+            path="/digits-landing-page/pricing"
+            element={<Pricing />}
+          />
+          <Route exact path="/digits-landing-page/blog" element={<Blog />} />
         </Routes>
         <Footer
           tabValue={tabValue}
