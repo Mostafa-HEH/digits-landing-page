@@ -1,0 +1,17 @@
+{
+  "files": {
+    "main.js": "/digits-landing-page/static/js/main.bf9f3e94.js",
+    "static/media/Graphic (2).png": "/digits-landing-page/static/media/Graphic (2).2a6272e9a39274c8a5b1.png",
+    "static/media/Graphic (1).png": "/digits-landing-page/static/media/Graphic (1).292daff8fb03381db885.png",
+    "static/media/Graphic.png": "/digits-landing-page/static/media/Graphic.2203e3e2eaadf28696ca.png",
+    "static/media/logo.svg": "/digits-landing-page/static/media/logo.aa0bcf29f5a5dfc97a42dba2e4215a11.svg",
+    "static/media/Icon-1.svg": "/digits-landing-page/static/media/Icon-1.a6b5baf31dc6886a82a1234bcbe283c8.svg",
+    "static/media/Icon-2.svg": "/digits-landing-page/static/media/Icon-2.8adee3022d4c52b7a3a59c76e8d66e40.svg",
+    "static/media/Icon.svg": "/digits-landing-page/static/media/Icon.c0412afc0463750bf1d6f8775cb17a57.svg",
+    "index.html": "/digits-landing-page/index.html",
+    "main.bf9f3e94.js.map": "/digits-landing-page/static/js/main.bf9f3e94.js.map"
+  },
+  "entrypoints": [
+    "static/js/main.bf9f3e94.js"
+  ]
+}
