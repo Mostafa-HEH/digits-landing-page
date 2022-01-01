@@ -32,6 +32,12 @@ export default createTheme({
       textAlign: "center",
       fontWeight: "600",
     },
+    h2: {
+      textAlign: "center",
+      fontSize: "2.5em",
+      fontWeight: "600",
+      color: "darkBlue",
+    },
     h3: {
       color: lightBlue,
       fontSize: ".9em",
@@ -41,6 +47,14 @@ export default createTheme({
       color: lightBlue50,
       fontSize: "1em",
       fontWeight: "600",
+    },
+    h5: {
+      color: darkBlue,
+      fontSize: "1.1rem",
+      fontWeight: "600",
+    },
+    body1: {
+      color: lightBlue,
     },
   },
 });

@@ -3,9 +3,12 @@ import { makeStyles } from "@mui/styles";
 
 import HeroSection from "./HeroSection.landing";
 import LogosSection from "./LogosSection.landing";
+import AboutSection from "./AboutSection.landing";
 
 const useStyles = makeStyles((theme) => ({
-  sectionsMargin: { ...theme.mixins.toolbar },
+  sectionsMargin: {
+    height: "5em"
+  },
   placeHolder: {
     backgroundColor: "#f4f43f",
     width: "100%",
@@ -23,6 +26,7 @@ const Landing = () => {
       <div className={sectionsMargin} />
       <LogosSection />
       <div className={sectionsMargin} />
+      <AboutSection />
       <div className={placeHolder} />
     </div>
   );
